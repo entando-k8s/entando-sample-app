@@ -1,0 +1,9 @@
+- kind: "EntandoApp"
+  metadata:
+    annotations: {}
+    labels: {}
+    name: "{{ .Release.Name }}"
+  spec:
+    dbms: {{ .Values.dbms }}
+    replicas: {{ .Values.replicas }}
+    ingressPath: /entando-sample-app

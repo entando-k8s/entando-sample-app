@@ -1,11 +1,11 @@
-# !! File must end with empty line !!
+#This file must always end with an empty line, or Helm will fail to do JSON/YAML conversion
 dependencies:
-- alias: operator
-  name: entando-k8s-controller-coordinator
-  repository: https://chartmuseum-jx.apps.serv.run
-  version: 6.0.55
-  condition: operator.deployLocally
-- alias: preview
-  name: entando-de-app
-  repository: file://../entando-de-app
-  version: 0.1.0-SNAPSHOT
+  - alias: operator
+    name: entando-k8s-controller-coordinator
+    repository: https://chartmuseum-jx.apps.serv.run
+    version: 6.0.55
+#  - alias: preview
+#    name: entando-sample-app
+#    repository: ../entando-sample-app
+#    version: 0.0.1
+

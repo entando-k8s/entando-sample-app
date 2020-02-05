@@ -1,0 +1,2 @@
+dbms: postgresql
+replicas: 1
