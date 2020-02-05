@@ -321,6 +321,9 @@
         </profile>
         <profile>
             <id>derby</id>
+            <activation>
+                <activeByDefault>true</activeByDefault>
+            </activation>
             <properties>
                 <db.vendor>derby</db.vendor>
                 <!--DB connection properties-->
@@ -338,6 +341,11 @@
                 <servdb.driverClassName>org.apache.derby.jdbc.EmbeddedDriver</servdb.driverClassName>
                 <servdb.jndi>java:/jdbc/servDataSource</servdb.jndi>
 
+            </properties>
+        </profile>
+        <profile>
+            <id>derby-init</id>
+            <properties>
                 <!-- DB work required from the server image. Create the template Derby databases -->
                 <server.init.command>
                     $ENTANDO_COMMON_PATH/init-derby-from-war.sh --war-file=${jboss.home.in.image}/standalone/deployments/${project.build.finalName}.war
