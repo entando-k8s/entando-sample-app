@@ -3,10 +3,10 @@
         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <groupId>org.entando.entando</groupId>
-    <artifactId>entando-de-app</artifactId>
+    <artifactId>entando-sample-app</artifactId>
     <packaging>war</packaging>
     <version>6.0.0-SNAPSHOT</version>
-    <name>entando-de-app</name>
+    <name>entando-sample-app</name>
     <url>http://www.entando.com/</url>
     <licenses>
         <license>
