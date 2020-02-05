@@ -514,7 +514,7 @@
                             </run>
                         </image>
                         <image>
-                            <nameentando/entando-app-builder-de:6.0.0</name>
+                            <name>entando/entando-app-builder-de:6.0.0</name>
                             <run>
                                 <skip>${skipAppBuilderImage}</skip>
                                 <network>

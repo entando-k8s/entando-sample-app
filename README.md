@@ -52,7 +52,7 @@ mvn clean package -Pwildfly -Pderby docker:build
 ## Steps to deploy
 
 1. From your Git client, clone this repository. Using the Git CLI, you could do this:    
-    `git clone https://github.com/entando/entando-sample-app.git`
+    `git clone https://github.com/entando-k8s/entando-sample-app.git`
 2. Change the project name to your preferred project name. 
     1.  From your favourite IDE, do a global search/replace for the 
 string `entando-sample-app` and replace it with your new app name. We will refer to this name in subsequent instructions 
