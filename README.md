@@ -95,7 +95,11 @@ as '[your-app-name]'. The files updated should be:
     `docker push docker.io/[your-dockerhub-username]/[your-app-name]:latest`   
 6. Deploy Entando App itself using Helm.
     1. Navigate to the `./charts/[your-app-name]` directory
-    2. Modify the `values.yaml` file to reflect your selection of DBMS and the number of replicas of the App you require
+    2. Modify the `values.yaml` file to reflect:    
+        * your selection of DBMS in `app.dbms`
+        * and the number of replicas of the App you require in `app.replicaCount`
+        * the Docker image name of your (e.g. docker.io/[your-dockerhub-username]/[your-app-name]) App in `app.repository`
+        * that tag of your Docker image (e.g. 1.0.0-SNAPSHOT) in `app.tag`
     3. From the commandline, in the `./charts/` directory, use Helm to generate a yaml file to deploy the Entando App:    
         `helm template --name=[your-app-name]  --namespace=[your-sandbox-namespace] [your-app-name]/ > entando-app.yaml`
     4. Inspect the resulting yaml file (`entando-app.yaml`) to inspect the resulting EntandoApp custom resource
