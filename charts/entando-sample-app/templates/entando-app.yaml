@@ -9,4 +9,4 @@ spec:
   dbms: {{ .Values.app.dbms }}
   replicas: {{ .Values.app.replicaCount }}
   customServerImage: "{{ .Values.app.repository }}:{{ .Values.app.tag }}"
-  ingressPath: /my-sample-app
+  ingressPath: /entando-sample-app
