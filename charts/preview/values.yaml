@@ -1,5 +1,3 @@
-app:
-  name: entando-sample-app
 operator:
   supportOpenshift: false
   env:

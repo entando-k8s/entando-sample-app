@@ -1,7 +1,7 @@
 kind: "EntandoCompositeApp"
 apiVersion: "entando.org/v1"
 metadata:
-  name: "{{ .Values.app.name }}-composite-app"
+  name: "{{ .Release.Name }}-composite-app"
   namespace: {{ .Release.Namespace}}
 entandoStatus:
   serverStatuses: {}
@@ -10,14 +10,14 @@ spec:
   components:
     - kind: "EntandoKeycloakServer"
       metadata:
-        name: "{{ .Values.app.name }}-kc"
+        name: "{{ .Release.Name }}-kc"
       spec:
         dbms: none
         isDefault: true
         replicas: 1
     - kind: "EntandoClusterInfrastructure"
       metadata:
-        name: "{{ .Values.app.name }}-eci"
+        name: "{{ .Release.Name }}-eci"
       spec:
         dbms: postgresql
         replicas: 1

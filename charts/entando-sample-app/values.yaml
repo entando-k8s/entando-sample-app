@@ -1,2 +1,5 @@
-dbms: postgresql
-replicas: 1
+app:
+  dbms: postgresql
+  repository: docker.io/entando/entando-sample-app
+  tag: latest
+  replicaCount: 1

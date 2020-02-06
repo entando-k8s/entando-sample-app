@@ -1,9 +1,12 @@
-- kind: "EntandoApp"
-  metadata:
-    annotations: {}
-    labels: {}
-    name: "{{ .Release.Name }}"
-  spec:
-    dbms: {{ .Values.dbms }}
-    replicas: {{ .Values.replicas }}
-    ingressPath: /entando-sample-app
+kind: "EntandoApp"
+apiVersion: "entando.org/v1"
+metadata:
+  annotations: {}
+  labels: {}
+  name: "{{ .Release.Name }}"
+  namespace: "{{ .Release.Namespace }}"
+spec:
+  dbms: {{ .Values.app.dbms }}
+  replicas: {{ .Values.app.replicaCount }}
+  customServerImage: "{{ .Values.app.repository }}:{{ .Values.app.tag }}"
+  ingressPath: /my-sample-app
